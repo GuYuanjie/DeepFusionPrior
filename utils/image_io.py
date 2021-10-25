@@ -54,18 +54,17 @@ def cmp_PSF(A,B,psf_r=5,k1=3,k2=3,k3=3,threshold=0.018,if_largest_region=1):
         m = D
         q = generate_largest_region(m)
         D = fillHole(q)
-
-
-
-    return D
-    """
-     plt.subplot(1, 3, 1)
+    
+    plt.subplot(1, 3, 1)
     plt.imshow(PSF, 'gray')
     plt.subplot(1, 3, 2)
     plt.imshow(F, 'gray')
     plt.subplot(1, 3, 3)
     plt.imshow(D, 'gray')
     plt.show()
+    return D
+    """
+    
     """
 
 
@@ -148,7 +147,6 @@ def clear_segmetation(x,k=3,k_dilated=3,k_eroded=3,threshold=0.018):
     #thresh1 = cv2.GaussianBlur(thresh1, ksize=(5, 5,), sigmaX=0, sigmaY=0)
     #thresh1= cv2.medianBlur(thresh1, 5)
     """
-    """
     plt.subplot(1, 2, 1)
     plt.title("Soucre Image")
     plt.imshow(x2, cmap="gray")
@@ -156,6 +154,8 @@ def clear_segmetation(x,k=3,k_dilated=3,k_eroded=3,threshold=0.018):
     plt.title("Segamenting Image")
     plt.imshow(thresh1)
     plt.show()
+    """
+
 
     return thresh1
 
